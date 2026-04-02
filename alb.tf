@@ -5,6 +5,7 @@ resource "aws_lb" "main" {
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb.id]
   subnets            = aws_subnet.public[*].id
+  version            = 1.1
 
   enable_deletion_protection = true
   drop_invalid_header_fields = true
